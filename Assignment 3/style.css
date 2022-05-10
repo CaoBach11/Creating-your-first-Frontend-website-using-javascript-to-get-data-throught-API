@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    background-color: pink;
+}   
+h1 {
+    display: inline-grid;
+    background-color :red;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: right;
+}
+.nhapDiem {
+    display: inline-grid;
+    background-color :lightblue;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: right;
+}
+.btn {
+    text-align: center;
+}
+.bangDiem {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+    background-color: chocolate;
+}
+.bangDiem, th, td {
+    border: solid 3px gray;
+}
+

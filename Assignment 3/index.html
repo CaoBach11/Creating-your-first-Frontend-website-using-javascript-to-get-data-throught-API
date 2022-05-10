@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <link rel = "stylesheet" href= "style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Class Marksheet</h1>
+    <div class="container">
+    <form class = "nhapDiem">
+        <p>Họ Tên: <input id = "hoten" type = "text" placeholder = "Nguyễn Văn A"></p>
+        <p>Điểm Toán: <input id = "toan" type = "number" placeholder = "7"> </p>
+        <p>Điểm Lý: <input id = "ly" type = "number"  placeholder = "8"> </p>
+        <p>Điểm Hoá: <input id = "hoa" type = "number"  placeholder = "9"></p>        
+        <div class="btn">
+            <button type="button" id="nhap">Nhập</button>
+        </div>
+        
+    </form>
+                            <!---->
+<div>                      
+<table class ="bangDiem">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Họ Tên</th>
+        <th>Toán</th>
+        <th>Lý</th>
+        <th>Hoá</th>
+        <th>Trung Bình</th>
+        <th>Xoá</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</div>
+                            <!---->
+<div class= "footer">
+        <button type="button" id="dtb">Tính Điểm Trung Bình </button>
+        <button type="button" id="hsg">Xác Định Học Sinh Giỏi</button>
+        <button type="button" id="hsy">Xác Định Học Sinh Yếu</button>
+</div>
+
+
+    <script lang="javascript" src="java.js"></script>
+    
+</body>
+</html>
