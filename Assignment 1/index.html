@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <button onclick="notify()">Try it</button>
+
+        <!-- Khai báo các biển để lấy thông tin của users -->
+    <p id ="name" style="font-weight: bold"></p>
+    <p id ="city" style="font-weight: bold"></p>
+    <p id = "age" style = "font-weight:bold"></p>
+    <p id ="mobile" style="font-weight: bold"></p>
+    <p id ="email" style="font-weight: bold"></p>
+    <p id ="job"  style="font-weight: bold"></p>
+    <p id ="address" style="font-weight: bold"></p>
+         <!-- Khai báo các biển để lấy thông tin của users -->
+
+
+        <!-- thẻ div cho nút bước tiếp theo -->
+    <div>
+        <button id="next" style="display: none;">Bước tiếp theo</button>
+    </div>
+<script>
+    // Hàm thông báo
+     function notify() {
+            alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên");
+
+
+        // Nhập họ và tên của users
+        var name = prompt("Hãy nhập họ và tên");
+        document.getElementById("name").innerHTML = "Họ và tên: " + name;
+  
+        // Nhập thành phố của users
+        var city = prompt("Hãy nhập thành phố bạn đang ở");
+        document.getElementById("city").innerHTML = "Thành phố: " + city;
+        // Nhập số điện thoại của users
+        var mobile = prompt("Hãy nhập số điện thoại");
+        document.getElementById("mobile").innerHTML = "Số điện thoại: " + mobile;
+
+        // Nhập địa chỉ email của users
+       var email = prompt("Hãy nhập địa chỉ email");
+        document.getElementById("email").innerHTML = "Email: " + email;
+
+        // Nhập công việc của users
+       var job = prompt("Hãy nhập công việc");
+        document.getElementById("job").innerHTML = "Công việc: " + job;
+
+        // Nhập địa chỉ làm việc của users
+       var address = prompt("Hãy nhập địa chỉ làm việc");
+        document.getElementById("address").innerHTML = "Địa chỉ làm việc: " + address;
+
+        // Hiển thị nút bước tiếp theo
+        document.getElementById("next").style.display = "block";
+
+        // Nhập năm sinh của users
+        var namsinh = prompt("Hãy nhập năm sinh: ");
+         var d = new Date
+
+        // Dùng hàm điều kiện để so sánh năm sinh nhỏ hơn năm hiện tại 
+         if (namsinh != "" && namsinh <= d.getFullYear() ){
+         
+        // Gọi hàm tính tuổi
+            tinhtuoi(namsinh);
+
+         } else {
+        // Sử dụng vòng lặp while đến khi thoả mãn điều kiện năm sinh
+             while ( namsinh == "" || namsinh > d.getFullYear() ){
+
+             var namsinh = prompt("Nhập lại năm sinh: ");
+        }
+        //Gọi hàm tính tuổi
+             tinhtuoi(namsinh);
+         }
+
+    } 
+    // Hàm tính tuổi      
+    function tinhtuoi(namsinh) { 
+        var d = new Date().getFullYear();
+        document.getElementById("age").innerHTML = "Tuổi: " + ( d - namsinh);
+    }
+    </script>
+</body>
+</html>
